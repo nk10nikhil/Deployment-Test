@@ -2,32 +2,39 @@ import express from 'express';
 
 const app = express();
 
+app.use(express.static('dist'));
+
 // app.get('/', (req, res) => {
 //     res.send('Server is ready');
 //     }
 // );
 
 // get a list of 5 jokes
-app.get('/jokes', (req, res) => {
+app.get('/api/jokes', (req, res) => {
     const jokes = [
         {
             id: 1,
+            title: 'Scarecrow Award',
             content: 'Why did the scarecrow win an award? Because he was outstanding in his field.'
         },
         {
             id: 2,
+            title: 'Fake Noodle',
             content: 'What do you call a fake noodle? An impasta.'
         },
         {
             id: 3,
+            title: 'Coffee Mugged',
             content: 'Why did the coffee file a police report? It got mugged.'
         },
         {
             id: 4,
+            title: 'Penguin House',
             content: 'How does a penguin build its house? Igloos it together.'
         },
         {
             id: 5,
+            title: 'Sad Math Book',
             content: 'Why did the math book look sad? Because it had too many problems.'
         }
     ];
