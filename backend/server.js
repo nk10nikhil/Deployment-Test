@@ -9,7 +9,6 @@ app.use(express.static('dist'));
 //     }
 // );
 
-// get a list of 5 jokes
 app.get('/api/jokes', (req, res) => {
     const jokes = [
         {
